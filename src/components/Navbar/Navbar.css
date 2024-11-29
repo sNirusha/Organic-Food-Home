@@ -1,0 +1,146 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 90px;
+}
+
+.app {
+    padding-top: 90px;
+}
+
+.navbar-content {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    width: 290px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: rgb(37, 161, 53);
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(37, 161, 53);
+    border: 1px solid rgb(37, 161, 53);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(37, 161, 53);
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(37, 161, 53);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        width: 200px;
+    }
+
+    .navbar-menu {
+        font-size: 16px;
+    }
+
+    .navbar button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .navbar-search-icon .dot {
+        min-width: 8px;
+    }
+}
+
+.basket{
+    border: none !important;
+}
